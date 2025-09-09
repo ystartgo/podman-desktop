@@ -1,0 +1,62 @@
+{
+  "navigation": {
+    "dashboard": "儀表板",
+    "containers": "容器",
+    "images": "映像",
+    "pods": "Pod",
+    "volumes": "儲存卷",
+    "extensions": "擴充功能",
+    "accounts": "帳戶",
+    "settings": "設定",
+    "troubleshooting": "疑難排解"
+  },
+  "kubernetes": {
+    "title": "Kubernetes",
+    "dashboard": "儀表板",
+    "nodes": "節點",
+    "pods": "Pod",
+    "persistentvolumeclaims": "持久儲存卷聲明",
+    "deployments": "部署",
+    "services": "服務",
+    "ingressesRoutes": "Ingress 與路由",
+    "jobs": "任務",
+    "cronjobs": "定時任務",
+    "configmapsSecrets": "設定映射與機密",
+    "portForward": "埠轉發"
+  },
+  "common": {
+    "name": "名稱",
+    "status": "狀態",
+    "actions": "操作",
+    "details": "詳細資訊",
+    "create": "建立",
+    "delete": "刪除",
+    "start": "啟動",
+    "stop": "停止",
+    "restart": "重新啟動",
+    "export": "匯出",
+    "import": "匯入",
+    "pull": "拉取",
+    "build": "建置",
+    "run": "執行",
+    "save": "儲存",
+    "load": "載入",
+    "deploy": "部署",
+    "edit": "編輯",
+    "copy": "複製",
+    "search": "搜尋",
+    "filter": "篩選",
+    "refresh": "重新整理"
+  },
+  "settings": {
+    "title": "設定",
+    "language": "語言",
+    "appearance": "外觀",
+    "resources": "資源",
+    "proxies": "代理",
+    "registries": "登錄處",
+    "authentication": "驗證",
+    "extensions": "擴充功能",
+    "experimental": "實驗性功能"
+  }
+}

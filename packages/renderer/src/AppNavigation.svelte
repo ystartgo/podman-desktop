@@ -4,6 +4,7 @@
 import { Tooltip } from '@podman-desktop/ui-svelte';
 import { onDestroy, onMount } from 'svelte';
 import type { TinroRouteMeta } from 'tinro';
+import { _ } from 'svelte-i18n';
 
 import { NavigationPage } from '/@api/navigation-page';
 
@@ -69,7 +70,7 @@ function onDidChangeConfigurationCallback(e: Event): void {
 <nav
   class="group w-leftnavbar {minNavbarWidth} flex flex-col hover:overflow-y-none bg-[var(--pd-global-nav-bg)] border-[var(--pd-global-nav-bg-border)] border-r-[1px]"
   aria-label="AppNavigation">
-  <NavItem href="/" tooltip="Dashboard" bind:meta={meta}>
+  <NavItem href="/" tooltip={$_('navigation.dashboard')} bind:meta={meta}>
     <div class="relative w-full">
       <div class="flex flex-col items-center w-full h-full">
         <div class="flex items-center w-fit h-full relative">
@@ -78,7 +79,7 @@ function onDidChangeConfigurationCallback(e: Event): void {
         </div>
         {#if iconWithTitle}
           <div class="text-xs text-center ml-[2px]" aria-label="Dashboard title">
-            Dashboard
+            {$_('navigation.dashboard')}
           </div>
         {/if}
       </div>
@@ -99,12 +100,12 @@ function onDidChangeConfigurationCallback(e: Event): void {
 
   <div bind:this={outsideWindow}>
     <NavItem href="/accounts" tooltip="" bind:meta={meta} onClick={(event): void => authActions?.onButtonClick(event)}>
-      <Tooltip bottomRight tip="Accounts">
+      <Tooltip bottomRight tip={$_('navigation.accounts')}>
         <div class="flex flex-col items-center w-full h-full">
           <AccountIcon size={iconSize} />
           {#if iconWithTitle}
             <div class="text-xs text-center ml-[2px]" aria-label="Accounts title">
-              Accounts
+              {$_('navigation.accounts')}
             </div>
           {/if}
         </div>
@@ -113,11 +114,11 @@ function onDidChangeConfigurationCallback(e: Event): void {
     </NavItem>
   </div>
 
-  <NavItem href="/preferences" tooltip="Settings" bind:meta={meta} onClick={handleClick}>
+  <NavItem href="/preferences" tooltip={$_('navigation.settings')} bind:meta={meta} onClick={handleClick}>
     <SettingsIcon size={iconSize} />
     {#if iconWithTitle}
       <div class="text-xs text-center ml-[2px]" aria-label="Settings title">
-        Settings
+        {$_('navigation.settings')}
       </div>
     {/if}
   </NavItem>

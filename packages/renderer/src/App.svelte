@@ -3,6 +3,11 @@ import './app.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import { router } from 'tinro';
+import { setupI18n } from './lib/i18n';
+import { _ } from 'svelte-i18n';
+
+// Initialize i18n
+setupI18n();
 
 import PinActions from '/@/lib/statusbar/PinActions.svelte';
 import { handleNavigation } from '/@/navigation';

@@ -2,6 +2,7 @@
 import { onMount } from 'svelte';
 
 import ExperimentalPage from '/@/lib/preferences/ExperimentalPage.svelte';
+import LanguageSelector from '/@/lib/preferences/LanguageSelector.svelte';
 import PreferencesContainerConnectionEdit from '/@/lib/preferences/PreferencesContainerConnectionEdit.svelte';
 import type { IConfigurationPropertyRecordedSchema } from '/@api/configuration/models.js';
 
@@ -48,6 +49,9 @@ onMount(async () => {
     {:else}
       empty
     {/if}
+  </Route>
+  <Route path="/language" breadcrumb="Language">
+    <LanguageSelector />
   </Route>
   <Route path="/experimental" breadcrumb="Experimental Features">
     <ExperimentalPage properties={properties}/>
