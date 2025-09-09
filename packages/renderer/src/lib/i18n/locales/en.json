@@ -46,11 +46,13 @@
     "copy": "Copy",
     "search": "Search",
     "filter": "Filter",
-    "refresh": "Refresh"
+    "refresh": "Refresh",
+    "update": "Update to"
   },
   "settings": {
     "title": "Settings",
     "language": "Language",
+    "languageDescription": "Select your preferred language for the user interface.",
     "appearance": "Appearance",
     "resources": "Resources",
     "proxies": "Proxies",

@@ -46,11 +46,13 @@
     "copy": "複製",
     "search": "搜尋",
     "filter": "篩選",
-    "refresh": "重新整理"
+    "refresh": "重新整理",
+    "update": "更新至"
   },
   "settings": {
     "title": "設定",
     "language": "語言",
+    "languageDescription": "選擇您偏好的使用者介面語言。",
     "appearance": "外觀",
     "resources": "資源",
     "proxies": "代理",

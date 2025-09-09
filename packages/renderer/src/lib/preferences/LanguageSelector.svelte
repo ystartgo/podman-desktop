@@ -2,6 +2,7 @@
 
 <script lang="ts">
 import { locale, locales, _ } from 'svelte-i18n';
+import { setLocale } from '../i18n';
 import SettingsPage from './SettingsPage.svelte';
 
 // Get available locales and create language options
@@ -12,7 +13,9 @@ const languageOptions = [
 
 function handleLanguageChange(event: Event): void {
   const target = event.target as HTMLSelectElement;
-  locale.set(target.value);
+  const selectedLocale = target.value;
+  locale.set(selectedLocale);
+  setLocale(selectedLocale);
 }
 </script>
 
@@ -33,7 +36,7 @@ function handleLanguageChange(event: Event): void {
         {/each}
       </select>
       <p class="text-sm text-[color:var(--pd-invert-content-card-text)]">
-        Select your preferred language for the user interface.
+        {$_('settings.languageDescription')}
       </p>
     </div>
   </div>
