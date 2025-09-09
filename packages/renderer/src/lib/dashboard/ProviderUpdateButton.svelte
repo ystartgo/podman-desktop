@@ -1,6 +1,7 @@
 <script lang="ts">
 import { faBoxOpen } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@podman-desktop/ui-svelte';
+import { _ } from 'svelte-i18n';
 
 import type { CheckStatus, ProviderInfo } from '/@api/provider-info';
 
@@ -57,6 +58,6 @@ async function performUpdate(provider: ProviderInfo): Promise<void> {
     icon={faBoxOpen}
     padding="px-3 py-0.5"
     on:click={(): Promise<void> => performUpdate(provider)}>
-    Update to {provider.updateInfo.version}
+    {$_('common.update')} {provider.updateInfo.version}
   </Button>
 {/if}
